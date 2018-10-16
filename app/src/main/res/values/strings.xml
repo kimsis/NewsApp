@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="no_network_image">Image for errors</string>
+    <string name="no_connection">No articles available. Please check your internet connection</string>
+    <string name="articles_problem">There is a problem with loading the articles</string>
+    <string name="URL">https://content.guardianapis.com/search?show-tags=contributor&amp;order-by=newest&amp;page=1&amp;api-key=eac8f8ee-a3e3-447c-a505-0de2b059d5dd</string>
+    <string name="date_format">"yyyy-MM-dd'T'HH:mm:ss'Z'"</string>
+    <string name="final_date_format">MMM, dd, yyyy</string>
+    <string name="error_HTTP_making">"Error making the HTTP request."</string>
+    <string name="error_JSON_parsing_date">Error parsing the JSON date: </string>
+    <string name="error_JSON_parsing_results">Error parsing the article JSON results</string>
+    <string name="error_JSON_retrieving_article">Error retrieving the article JSON results.</string>
+    <string name="error_URL_building">Error building the URL </string>
+    <string name="error_URL_response">Error response code: </string>
+    <string name="get">GET</string>
+    <string name="UTF">UTF-8</string>
+    <string name="no_author">No author</string>
+</resources>
