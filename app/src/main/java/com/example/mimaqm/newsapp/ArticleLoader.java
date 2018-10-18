@@ -10,9 +10,11 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
 
     static Resources mResources = App.getContext().getResources();
     private static String ARTICLE_URL = mResources.getString(R.string.URL);
+    private String mUrl;
 
-    public ArticleLoader( Context context) {
+    public ArticleLoader( Context context, String url) {
         super(context);
+        mUrl = url;
     }
 
     @Override
@@ -23,10 +25,10 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
     @Override
     public List<Article> loadInBackground() {
 
-        if (ARTICLE_URL == null)
+        if (mUrl == null)
         return null;
 
-        List<Article> articleList = QueryUtilities.fetchArticleData(ARTICLE_URL);
+        List<Article> articleList = QueryUtilities.fetchArticleData(mUrl);
         return articleList;
     }
 }

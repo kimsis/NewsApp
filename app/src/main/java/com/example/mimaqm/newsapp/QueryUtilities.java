@@ -154,26 +154,26 @@ public class QueryUtilities {
             // Create the JSONObject from a JSON string
             JSONObject baseJsonResponse = new JSONObject(articleJSON);
 
-            JSONObject response = baseJsonResponse.getJSONObject("response");
-            JSONArray results = response.getJSONArray("results");
+            JSONObject response = baseJsonResponse.getJSONObject(mResources.getString(R.string.response));
+            JSONArray results = response.getJSONArray(mResources.getString(R.string.results));
 
             for (int i = 0; i < results.length(); i++)
             {
                 JSONObject baseJSONArticle = results.getJSONObject(i);
-                String articleTitle = baseJSONArticle.getString("webTitle");
-                JSONArray articleTags = baseJSONArticle.getJSONArray("tags");
+                String articleTitle = baseJSONArticle.getString(mResources.getString(R.string.webTitle));
+                JSONArray articleTags = baseJSONArticle.getJSONArray(mResources.getString(R.string.tags));
                 String articleAuthorName;
                 if(articleTags.length() != 0)
                 {
-                    articleAuthorName = articleTags.getJSONObject(0).getString("webTitle");
+                    articleAuthorName = articleTags.getJSONObject(0).getString(mResources.getString(R.string.webTitle));
                 }
                 else
                 {
                     articleAuthorName = mResources.getString(R.string.no_author);
                 }
-                String articleCategory = baseJSONArticle.getString("sectionName");
-                String articleUrl = baseJSONArticle.getString("webUrl");
-                String articleDate = baseJSONArticle.getString("webPublicationDate");
+                String articleCategory = baseJSONArticle.getString(mResources.getString(R.string.sectionName));
+                String articleUrl = baseJSONArticle.getString(mResources.getString(R.string.webUrl));
+                String articleDate = baseJSONArticle.getString(mResources.getString(R.string.webPublicationDate ));
                 articleDate = formatDate(articleDate);
 
                 Article article = new Article(articleTitle, articleAuthorName, articleCategory, articleUrl, articleDate);
