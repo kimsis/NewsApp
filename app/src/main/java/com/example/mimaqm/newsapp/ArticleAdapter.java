@@ -29,17 +29,17 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         Article currentArticle = getItem(position);
 
-        TextView title = listItemView.findViewById(R.id.article_title);
-        title.setText(currentArticle.getTitle());
+        TextView titleTextView = listItemView.findViewById(R.id.article_title);
+        titleTextView.setText(currentArticle.getTitle());
 
-        TextView category = listItemView.findViewById(R.id.article_category);
-        category.setText(currentArticle.getCategory());
+        TextView categoryTextView = listItemView.findViewById(R.id.article_category);
+        categoryTextView.setText(currentArticle.getCategory());
 
-        TextView date = listItemView.findViewById(R.id.article_date);
-        date.setText(currentArticle.getDate());
+        TextView dateTextView = listItemView.findViewById(R.id.article_date);
+        dateTextView.setText(currentArticle.getDate());
 
-        TextView author = listItemView.findViewById(R.id.article_author);
-        author.setText(currentArticle.getAuthorName());
+        TextView TextView = listItemView.findViewById(R.id.article_author);
+        TextView.setText(currentArticle.getAuthorName());
 
         return listItemView;
     }
